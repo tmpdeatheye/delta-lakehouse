@@ -1,0 +1,37 @@
+organization:
+  name: organization
+
+database:
+  host: postgresql
+  port: 5432
+  name: conduktor
+  username: username
+  password: password
+  connection_timeout: 30 # in seconds
+
+admin:
+  email: username
+  password: password
+
+auth:
+  local-users:
+    - email: username
+      password: password
+
+monitoring:
+  cortex-url: http://conduktor-monitoring:9009/
+  alert-manager-url: http://conduktor-monitoring:9010/
+  callback-url: http://conduktor-platform:8080/monitoring/api/
+  notifications-callback-url: http://0.0.0.0:8080
+
+clusters:
+  - id: kafka
+    name: kafka
+    bootstrapServers: kafka:9092
+    schemaRegistry:
+      id: schema-registry
+      url: http://schema-registry:8081
+    kafkaConnects:
+      - id: debezium
+        name: debezium
+        url: http://debezium:8083

@@ -1,0 +1,1 @@
+CREATE DATABASE conduktor WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.UTF-8';
