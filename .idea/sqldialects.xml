@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/bootstrap/config/mysql/initdb/billing.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/bootstrap/config/postgresql/initdb/conduktor.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/bootstrap/config/postgresql/initdb/metastore.sql" dialect="PostgreSQL" />
+    <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

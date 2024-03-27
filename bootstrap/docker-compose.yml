@@ -155,10 +155,8 @@ services:
         ipv4_address: 10.1.1.8
     hostname: mysql
     environment:
-      MYSQL_USER: username
-      MYSQL_PASSWORD: password
+      MYSQL_ROOT_USER: username
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: billing
       MYSQL_EXTRA_FLAGS: >
         --gtid-mode=ON
         --enforce_gtid_consistency=ON

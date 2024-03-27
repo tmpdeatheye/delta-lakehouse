@@ -1,8 +1,9 @@
+CREATE DATABASE IF NOT EXISTS billing;
+
 USE billing;
 
 CREATE TABLE IF NOT EXISTS invoice
 (
-    id          BIGINT PRIMARY KEY AUTO_INCREMENT,
     order_id    BIGINT UNSIGNED NOT NULL,
     created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     description VARCHAR(255)
