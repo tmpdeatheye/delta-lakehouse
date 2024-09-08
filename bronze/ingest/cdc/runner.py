@@ -71,12 +71,9 @@ value = (
     )
     .select(
         # if op = 'd' then order_id = fields.before.order_id else order_id = fields.after.order_id
-        when(col("fields.op") == "d", col("fields.before.order_id")).otherwise(col("fields.after.order_id")).alias(
-            "order_id"),
-        when(col("fields.op") == "d", col("fields.before.created_at")).otherwise(col("fields.after.created_at")).alias(
-            "created_at"),
-        when(col("fields.op") == "d", col("fields.before.description")).otherwise(
-            col("fields.after.description")).alias("description"),
+        when(col("fields.op") == "d", col("fields.before.order_id")).otherwise(col("fields.after.order_id")).alias("order_id"),
+        when(col("fields.op") == "d", col("fields.before.created_at")).otherwise(col("fields.after.created_at")).alias("created_at"),
+        when(col("fields.op") == "d", col("fields.before.description")).otherwise(col("fields.after.description")).alias("description"),
         col("fields.op").alias("op")
     )
     .withColumn("date", to_date(col("created_at"), "yyyy-MM-dd"))
